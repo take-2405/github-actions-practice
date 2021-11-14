@@ -6,6 +6,9 @@ on:
       - main
       - create/**
       - fix/**
+    paths:
+      - "/pkg/**"
+      - "main.go"
   pull_request:
     branches: [ main ]
 
