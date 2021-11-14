@@ -74,17 +74,17 @@ func Test_upDateAddLike_Request(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "updateDeleteLikeSuccess",
-			fields: fields{ArticleID: "2"},
-			args: args{"b1018085"},
-			want: &dto.Nice{100},
-			wantErr: false,
-		},
-		{
 			name: "updateADDLikeSuccess",
 			fields: fields{ArticleID: "2"},
 			args: args{"b1018085"},
 			want: &dto.Nice{101},
+			wantErr: false,
+		},
+		{
+			name: "updateDeleteLikeSuccess",
+			fields: fields{ArticleID: "2"},
+			args: args{"b1018085"},
+			want: &dto.Nice{100},
 			wantErr: false,
 		},
 	}
