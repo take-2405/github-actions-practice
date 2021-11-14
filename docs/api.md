@@ -2,9 +2,12 @@
 本リポジトリのAPIは、過去に作成した記事管理サービスのAPIである。  
 実装時はマイクロサービスアーキテクチャを採用したため、本APIでは、記事情報送信や記事の評価(いいね)を行う。
 
+APIは全てPOSTで実装している。  
+時間があればGETでできる処理はGETでできるようにしたい。
+
 ## 各エンドポイントのリクエストとレスポンス
 ### /read/articles
-- method：GET
+- method：POST
 #### Request   
 > - genre : string
 > - month : int
@@ -56,7 +59,7 @@
 ```
 
 ### /query/tag/articles  
-- method：GET
+- method：POST
 #### Request   
 > - tag : string  
 
@@ -86,7 +89,7 @@
 ---
 
 ### /read/article 
-- method：GET
+- method：POST
 #### Request   
 > - articleID : string  
 ###### Header
