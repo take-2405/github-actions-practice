@@ -1,0 +1,37 @@
+name: Go
+
+on:
+  push:
+    branch:
+      - main
+      - create/**
+      - fix/**
+    paths:
+      - "/pkg/**"
+      - "main.go"
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Go-API
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.13
+
+      - name: Build
+        run: GOOS=linux GOARCH=amd64 go build -o hello main.go
+
+      - name: DB-Run
+        run: make compose-build
+
+      - name: Test
+        run: go test -v ./...
+
+      - name: DB-Clean
+        run: make compose-clean
