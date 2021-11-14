@@ -1,16 +1,16 @@
 package controller
-
-import (
-	"net/http"
-	"reflect"
-	"testing"
-	"backend-record/pkg/view"
-	"github.com/gin-gonic/gin"
-
-	"backend-record/pkg/model/dto"
-	)
-
-
+//
+//import (
+//	"net/http"
+//	"reflect"
+//	"testing"
+//	"backend-record/pkg/view"
+//	"github.com/gin-gonic/gin"
+//
+//	"backend-record/pkg/model/dto"
+//	)
+//
+//
 //func TestUpdateAddLikeHandler(t *testing.T) {
 //	tests := []struct {
 //		name string
@@ -18,7 +18,7 @@ import (
 //	}{
 //		{
 //			name: "TestAddLikeHandker",
-//			want: &gin.Context.JSON(http.StatusOK, view.ReturnNiceResopnse(dto.Nice{1})),
+//			want: gin.Context.JSON(http.StatusOK, view.ReturnNiceResopnse(dto.Nice{1})),
 //		},
 //	}
 //	for _, tt := range tests {

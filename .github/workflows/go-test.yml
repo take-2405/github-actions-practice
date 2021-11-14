@@ -28,7 +28,7 @@ jobs:
         run: make compose-build
 
       - name: Test
-        run: ./../pkg/go test -v ./...
+        run: go test -v ./...
 
       - name: DB-Clean
         run: make compose-clean
