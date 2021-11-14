@@ -25,10 +25,10 @@ jobs:
         run: GOOS=linux GOARCH=amd64 go build -o hello main.go
 
       - name: DB-Run
-          run: make compose-build
+        run: make compose-build
 
       - name: Test
         run: ./../pkg/go test -v ./...
 
       - name: DB-Clean
-          run: make compose-clean
+        run: make compose-clean
