@@ -9,7 +9,7 @@ all:
 clean:
 	rm server
 build:
-	$(GO_BUILD) -o server main.go
+	$(GO_BUILD) -o hello main.go
 run:
 	$(GO_RUN) main.go
 docker-build:
