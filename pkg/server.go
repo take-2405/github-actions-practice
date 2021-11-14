@@ -19,5 +19,5 @@ func init() {
 	//記事のタグ検索
 	Server.GET("/read/tag/articles", controller.ReadTagArticlesHandler())
 	//記事のいいね数更新
-	Server.PUT("/update/add/like", controller.UpdateAddLikeHandler())
+	Server.POST("/update/add/like", controller.UpdateAddLikeHandler())
 }
