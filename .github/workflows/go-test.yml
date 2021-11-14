@@ -1,7 +1,11 @@
 name: Go
 
 on:
-  [push]
+  push:
+    branch:
+      - main
+      - create/**
+      - fix/**
   pull_request:
     branches: [ main ]
 
